@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="line">
+                <span><h1> CONTACT ME &#128587;</h1></span>
+            </div>
+            <div class="line">
+                <span>	
+                    &#128232; <a href = "mailto:panditsouvik50@.com">Send Email</a>
+                </span>
+            </div>
+            <div class="line">
+                <span>&#128279; <a href="https://www.linkedin.com/in/souvik-pandit-97175a234/">Linkedin</a> </span>
+            </div>
+            <div class="line"><span>&#9996; <a href="https://www.facebook.com/profile.php?id=100082068540477">Facebook</a></span></div>
+            <!-- <div class="line"><span>concepts of web designing to you.</span></div> -->
+        </div>
+        <script>
+            const textrev = gsap.timeline();
+
+            textrev.from(".line span", 1.8, {
+                y: 200,
+                ease: "power4.out",
+                delay: 1,
+                skewY: 10,
+                stagger: {
+                    amount: 0.4,
+                },
+            });
+        </script>
+    </body>
+</html>

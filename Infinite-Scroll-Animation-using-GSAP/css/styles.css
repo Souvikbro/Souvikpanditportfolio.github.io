@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@200;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.menu {
+  height: 100vh;
+  overflow: hidden;
+  background: #e4e4e4;
+  cursor: -webkit-grab;
+  cursor: grab;
+  /* position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+}
+
+
+.menu.is-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.menu ul {
+  counter-reset: count;
+  list-style: none;
+}
+.menu--item {
+  counter-increment: count;
+  position: absolute;
+  z-index: 1;
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  font-size: 120px;
+  line-height: 1.2;
+  padding: 2rem 0;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .menu--item {
+    font-size: 10vw;
+    padding: 1rem 0;
+  }
+}
+.menu--item:nth-child(n+10):before {
+  content: counter(count);
+}
+.menu--item a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 100px;
+  -webkit-appearance: none;
+  background: none;
+  padding-top: 50px;
+  
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #000;
+  /* font-family: "Voyage", serif; */
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .menu--item a {
+    font-size: 10vw;
+  }
+}
+
+
+@media(max-width:375px) {
+  a{
+    font-size: 1.5rem;
+    padding: 40px;
+  }
+
+
+}
+
+

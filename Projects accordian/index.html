@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+	</head>
+	<body>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">	
+					&#9748;</div>
+				<div class="acc-title">Weather App</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				A simple weather app using open weather API using a hosting server
+			</li>
+			<li>used postman API tool for the API breakdown</li>
+			<li>fetched the data by parsing the JSON file</li>
+		</ul>
+
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">&#127760;</div>
+				<div class="acc-title">Web Scrapper Tool</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				A logical web scrapping tools developed using python and beautiful soup
+			</li>
+			<li>Used python , pip library and request module</li>
+			<li>Can be used with any URL to fetch the data
+				Selective data representation using findall , text , strippedstring</li>
+		</ul>
+
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">&#128663;</div>
+				<div class="acc-title">Car Rental Website</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Fullstack project for our college
+			</li>
+			<li>Used regular frontend and nodejs and mongo db for backend</li>
+			<li>Can book a car and data can be stored in mongo db</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">	
+					&#128480;</div>
+				<div class="acc-title">Stock Market Analysis</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Final year data science project
+			</li>
+			<li>Trying to predict the price of a particular stock or share using the data available in the
+				market</li>
+			<li>Data taken from yahoo finanace
+				Hosted using Streamlit
+				Packages : Pandas / Keras / pyplot / Data Reader</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">&#127979;</div>
+				<div class="acc-title">Naveen Vidyarthi</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Made a wireless power generator
+			</li>
+			<li>Using the fusion of tesla coil and rotating magnets</li>
+			<li>Get a very good response of the idea</li>
+		</ul>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">&#127775;</div>
+				<div class="acc-title">Smart India Hackathon</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				made a optimized-chatbot
+			</li>
+			<li>using javascript for our colledge website</li>
+			<li>came 4th in colledge for the project</li>
+		</ul>
+		
+
+		<script>
+			let parent = document.querySelectorAll("[data-collapse");
+			parent.forEach((element) => {
+				let clickTarget = element.querySelector("*");
+				let collapseElement = element.nextElementSibling;
+				let collapseElementChildren = collapseElement.children;
+				let tl = new TimelineMax({
+					reversed: true,
+					paused: true,
+				});
+
+				tl.from(
+					collapseElement,
+					1.6,
+					{
+						className: "+=heightZero",
+						ease: Expo.easeInOut,
+					},
+					"open"
+				);
+				tl.staggerFrom(
+					collapseElementChildren,
+					1,
+					{
+						autoAlpha: 0,
+						y: "40%",
+						ease: Expo.easeInOut,
+					},
+					0.08,
+					"open+=.1"
+				);
+
+				clickTarget.addEventListener("click", () => {
+					tl.reversed() ? tl.play() : tl.reverse();
+				});
+			});
+		</script>
+	</body>
+</html>
