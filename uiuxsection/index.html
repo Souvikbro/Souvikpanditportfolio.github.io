@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UI/UX section</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="line">
+                <span><h1> My Works</h1></span>
+            </div>
+            
+            <div class="line">
+                <span>&#127936; <a href="https://dribbble.com/Souvik123456789">Dribble</a> </span>
+            </div>
+            <div class="line"><span>&#128302; <a href="https://www.behance.net/souvikpandit1">Behance</a></span></div>
+            <!-- <div class="line"><span>concepts of web designing to you.</span></div> -->
+            <div class="line">
+                <span><h2>UX Principles</h2></span>
+            </div>
+            
+            <div class="line">
+                <span>&#9889; <a href="https://lawsofux.com/">lawsofux.com</a> </span>
+            </div>
+            <div class="line"><span>&#128081; <a href="https://www.awwwards.com/">Awwwards.com</a></span></div>
+            <div class="line">
+                <span><h2> Design System</h2></span>
+            </div>
+            
+            <div class="line">
+                <span>&#127794;<a href="https://spotify.design/"> Spotify.design</a> </span>
+            </div>
+            <div class="line"><span>&#129412;<a href="https://m3.material.io/"> Material design</a></span></div>
+        </div>
+
+        <script>
+            const textrev = gsap.timeline();
+
+            textrev.from(".line span", 1.8, {
+                y: 300,
+                ease: "power4.out",
+                delay: 1,
+                skewY: 10,
+                stagger: {
+                    amount: 0.9,
+                },
+            });
+        </script>
+    </body>
+</html>
